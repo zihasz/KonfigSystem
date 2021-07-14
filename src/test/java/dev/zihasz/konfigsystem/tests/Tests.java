@@ -13,10 +13,10 @@ import java.nio.file.Paths;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class BasicTest {
+public class Tests {
 
 	@Test
-	public void saveAndLoadConfig() throws Exception {
+	public void saveLoadTest() throws Exception {
 		String path = "configs/";
 
 		if (!Files.exists(Paths.get(path)))
@@ -48,6 +48,40 @@ public class BasicTest {
 		
 		assertEquals(konfig1, loaded1, "Loaded1 konfig should equal the original1 one.");
 		assertEquals(konfig2, loaded2, "Loaded2 konfig should equal the original2 one.");
+	}
+
+	@Test
+	public void modifyTest() throws Exception {
+		String path = "configs/";
+
+		if (!Files.exists(Paths.get(path)))
+			Files.createDirectory(Paths.get(path));
+
+		KeyGenerator keyGenerator = KeyGenerator.getInstance("DES");
+		KonfigSystem system = new KonfigSystem(path, keyGenerator.generateKey());
+
+		Konfig konfig = new KonfigBuilder()
+				.add("testString", "string")
+				.add("testBool", false)
+				.add("testInt", 5)
+				.add("testLong", 10000L)
+				.add("testFloat", 10.677F)
+				.add("testDouble", 1.00000000000000008D)
+				.construct();
+
+		system.addKonfig("modifyTest", konfig);
+		system.getKonfig("modifyTest").dataMap.put("testString", "niggaBallz");
+		system.save("modifyTest");
+
+		Konfig loaded = system.load("modifyTest");
+
+		system.LOGGER.info("Original: ");
+		system.LOGGER.info(konfig.dataMap);
+
+		system.LOGGER.info("Loaded: ");
+		system.LOGGER.info(loaded.dataMap);
+
+		assertEquals("niggaBallz", loaded.dataMap.get("testString"), "Loaded testString should be \"niggaBallz\"");
 	}
 
 }
