@@ -5,8 +5,8 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.5.10'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+group 'dev.zihasz.konfigsystem'
+version '1.0'
 
 repositories {
     mavenCentral()
