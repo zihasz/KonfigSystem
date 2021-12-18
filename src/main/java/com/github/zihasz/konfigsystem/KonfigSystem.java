@@ -1,10 +1,10 @@
-package dev.zihasz.konfigsystem;
+package com.github.zihasz.konfigsystem;
 
-import dev.zihasz.konfigsystem.encryption.DES;
-import dev.zihasz.konfigsystem.files.BinaryReader;
-import dev.zihasz.konfigsystem.files.BinaryWriter;
-import dev.zihasz.konfigsystem.konfig.Konfig;
-import dev.zihasz.konfigsystem.util.Serialization;
+import com.github.zihasz.konfigsystem.encryption.DES;
+import com.github.zihasz.konfigsystem.files.BinaryReader;
+import com.github.zihasz.konfigsystem.files.BinaryWriter;
+import com.github.zihasz.konfigsystem.konfig.Konfig;
+import com.github.zihasz.konfigsystem.util.Serialization;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;

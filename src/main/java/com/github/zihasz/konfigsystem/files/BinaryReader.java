@@ -1,4 +1,4 @@
-package dev.zihasz.konfigsystem.files;
+package com.github.zihasz.konfigsystem.files;
 
 import java.io.Closeable;
 import java.io.DataInputStream;

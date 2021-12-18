@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-group 'dev.zihasz.konfigsystem'
+group 'com.github.zihasz'
 version '1.0'
 
 repositories {
@@ -14,8 +14,8 @@ dependencies {
     implementation group: 'log4j', name: 'log4j', version: '1.2.17'
     implementation group: 'com.google.guava', name: 'guava', version: '30.1.1-jre'
 
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 }
 
 test {

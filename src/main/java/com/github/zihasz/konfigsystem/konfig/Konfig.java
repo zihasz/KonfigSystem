@@ -1,4 +1,4 @@
-package dev.zihasz.konfigsystem.konfig;
+package com.github.zihasz.konfigsystem.konfig;
 
 import java.util.HashMap;
 import java.util.Map;

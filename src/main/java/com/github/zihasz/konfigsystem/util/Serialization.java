@@ -1,4 +1,4 @@
-package dev.zihasz.konfigsystem.util;
+package com.github.zihasz.konfigsystem.util;
 
 import java.io.*;
 

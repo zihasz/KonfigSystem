@@ -1,4 +1,4 @@
-package dev.zihasz.konfigsystem.encryption;
+package com.github.zihasz.konfigsystem.encryption;
 
 import javax.crypto.*;
 import java.security.InvalidKeyException;

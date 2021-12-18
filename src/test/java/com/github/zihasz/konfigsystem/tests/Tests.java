@@ -1,14 +1,13 @@
-package dev.zihasz.konfigsystem.tests;
+package com.github.zihasz.konfigsystem.tests;
 
-import dev.zihasz.konfigsystem.KonfigSystem;
-import dev.zihasz.konfigsystem.konfig.Konfig;
-import dev.zihasz.konfigsystem.konfig.KonfigBuilder;
+import com.github.zihasz.konfigsystem.KonfigSystem;
+import com.github.zihasz.konfigsystem.konfig.Konfig;
+import com.github.zihasz.konfigsystem.konfig.KonfigBuilder;
 import org.junit.jupiter.api.Test;
 
 import javax.crypto.KeyGenerator;
 
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import static org.junit.jupiter.api.Assertions.*;

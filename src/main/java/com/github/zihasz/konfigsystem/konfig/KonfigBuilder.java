@@ -1,4 +1,4 @@
-package dev.zihasz.konfigsystem.konfig;
+package com.github.zihasz.konfigsystem.konfig;
 
 public class KonfigBuilder {
 
